@@ -14,7 +14,6 @@ _Install NPM and Bower:_
 ```
 - npm install
 - bower install
-
 ```
 _Install globals if needed (gulp, bower, sass, typescript, typescript packages.):_
 
@@ -24,14 +23,12 @@ _Install globals if needed (gulp, bower, sass, typescript, typescript packages.)
   - gem install sass
   - npm install typescript -g
   - apm install atom-typescript
-
 ```
 _Run the program:_
 
 ```
 - gulp build
 - gulp serve
-
 ```
 ## Known Bugs
 _No known bugs_
