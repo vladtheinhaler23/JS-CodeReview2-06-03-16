@@ -8,13 +8,15 @@ A simple Angular web app that lets a user enter a meal with description and calo
 
 ## Setup/Installation Requirements
 
-* clone repo
+_Clone repo_
+
+_Install NPM and Bower:_
 ```
 - npm install
 - bower install
 
 ```
-* install globals if needed (gulp, bower, sass, typescript, typescript packages.)
+_Install globals if needed (gulp, bower, sass, typescript, typescript packages.):_
 
 ```
   - npm install gulp -g
@@ -24,7 +26,7 @@ A simple Angular web app that lets a user enter a meal with description and calo
   - apm install atom-typescript
 
 ```
-* Run the program
+_Run the program:_
 
 ```
 - gulp build
