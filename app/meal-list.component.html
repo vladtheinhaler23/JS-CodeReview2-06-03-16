@@ -1,0 +1,5 @@
+<meal-display *ngFor="#currentMeal of mealList"
+  (click)="mealClicked(currentMeal)"
+  [class.selected]="currentMeal === selectedMeal"
+  [meal]="currentMeal">
+</task-display>
