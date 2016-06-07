@@ -13,9 +13,9 @@ import {CaloriePipe} from './calorie.pipe';
   directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
   template: `
   <select (change)="onChange($event.target.value)" class="filter">
-    <option value="all">Show All</option>
+    <option value="all" selected="selected">Show All</option>
     <option value="above">Show Above 500 Calories</option>
-    <option value="below" selected="selected">Show Below 500 Calories</option>
+    <option value="below">Show Below 500 Calories</option>
   </select>
   <meal-display *ngFor="#currentMeal of mealList | calorie:filterCalories"
     (click)="mealClicked(currentMeal)"
@@ -31,7 +31,7 @@ export class MealListComponent {
   public mealList: Meal[];
   public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
-  public filterCalories: string = "below";
+  public filterCalories: string = "";
   constructor() {
     this.onMealSelect = new EventEmitter();
   }
@@ -39,10 +39,8 @@ export class MealListComponent {
     this.selectedMeal = clickedMeal;
     this.onMealSelect.emit(clickedMeal);
   }
-  createMeal(name: string, details: string, calories: number): void {
-    this.mealList.push(
-      new Meal(name, details, calories)
-    );
+  createMeal(newMeal: Meal): void {
+    this.mealList.push(newMeal);
   }
   onChange(filterOption) {
     this.filterCalories = filterOption;
